@@ -11,7 +11,6 @@
 \begin{figure}[htp]
 \centering
 \includegraphics[scale=1.50]{Tcl.png}
-\caption{}
 \label{Logo}
 \end{figure}
 \end{center}
@@ -22,20 +21,12 @@
 \listoffigures
 \listoftables
 \end{center}
-
 \newpage
 \begin{flushleft}
 \section{Wat is Tool Command Language?}
 Tool Command Language, afgekort Tcl, is een open-source scripttaal ontwikkeld door John Ousterhout. Tcl wordt uitgesproken als “Tickle” ofwel “tee-see-el”. Het wordt beschouwd als een erg flexibele scripttaal en is bovendien makkelijk uitbreidbaar.\medskip
 
-Tcl is grotendeels bedoeld om zelfstandig gebruikt te worden maar wordt ook gebruikt als scripttaal in andere programma’s.\medskip
-
-Tcl is vergelijkbaar met:
-\begin{itemize}
-	\item Netscape JavaScript
-	\item Microsoft's Visual Basic
-	\item IBM's Restructured Extended Executor
-\end{itemize}
+Tcl is grotendeels bedoeld om zelfstandig gebruikt te worden maar wordt ook gebruikt als scripttaal in andere programma’s.
 \subsection{Ontstaan}
 Tcl werd ontwikkeld in het jaar 1988 toen John Ousterhout werkte aan de universiteit Barkeley in Californië.\medskip
 
@@ -45,16 +36,19 @@ Tcl is nog steeds in ontwikkeling en is beschikbaar op Windows, Mac en Unix. De 
 \subsection{Grammatica}
 Tcl heeft is bedoeld als een simpele programmeer taal en heeft dan ook een makkelijk te begrijpen grammatica. De basisprincipes kan je in onderstaande tabel terugvinden.\\
 \begin{table}[!ht]
-\begin{tabular}{l}
+\begin{tabular}{|l|}
+\hline
 	Een zin is opgebouwd uit woorden gescheiden door spaties.\\
 	Een tekst bestaat uit zinnen, gescheiden door return-tekens.\\
 	Het eerste woord is een commando. De woorden die volgen zijn parameters die je wilt meegeven.\\
 	Een tekst die bestaat uit commando's is een script.\\
 	Een "\$" voor een woord zal de waarde van de variabele weergeven.\\
-	Tekst tussen accolades wordt letterlijk genomen.
+	Tekst tussen accolades wordt letterlijk genomen.\\
+	\hline
 \end{tabular}
  \caption{Grammatica}
 \end{table}
+\newpage
 \subsection{Voordelen van Tcl}
 \textbf{Voordelen}
 \begin{itemize}
@@ -197,9 +191,31 @@ Ze zijn echter niet voor alles geschikt en worden daarom vaak in combinatie met 
 \subsection{Kiezen van een versiebeheersysteem}
 Het kiezen van een versiebeheersysteem om op te zetten binnen Linux was voor mij niet moeilijk.\medskip
 
-Ik heb al eerder gewerkt met SVN tortoise maar mits ik hiermee problemen ondervond heb ik gezocht naar een alternatief. Dit alternatief heb ik gevonden bij Git en ik ben erg tevreden van mijn keuze. Het was makkelijk te installeren en ook handig om te gebruiken.
-\subsection{Installatie}
+Ik heb al eerder gewerkt met tortoiseCVS maar mits ik hiermee problemen ondervond heb ik gezocht naar een alternatief. Dit alternatief heb ik gevonden bij Git en ik ben erg tevreden van mijn keuze. Het was makkelijk te installeren en ook handig om te gebruiken.\medskip
 
+Op http://help.github.com/linux-set-up-git/ vond ik bovendien zo goed als alle uitleg voor het opstellen van Git terug.
+\subsection{Installatie}
+Het eerste wat je moet doen om git te kunnen gebruiken is het natuurlijk installeren. Je kan dit doen via het Ububtu Software Center.\medskip
+
+Hierna volg je gewoon de stappen beschreven op help.github.com. De vereiste commando's kan je bekijken op onderstaande afbeelding. Voeg hierna de SSH key toe aan je account op GitHub.com, maak een nieuw repository aan en voer opnieuw de nodige stappen uit.\medskip
+
+\begin{figure}[htp]
+\includegraphics[scale=0.53]{Git_Codevoor_Setup.png}
+\label{}
+\includegraphics[scale=0.61]{InstallGitHubsite.png}
+\label{}
+\end{figure}
+\newpage
+De volgende stap is het aanmaken en commiten van eer Readme bestand. Dit is geen vereiste voor de opdracht. Nadien gaan we ons Latex bestand commiten.
+\begin{figure}[htp]
+\includegraphics[scale=0.80]{GitReadMeCommit.png}
+\includegraphics[scale=0.65]{GitReadMeCommit2.png}
+\label{}
+\includegraphics[scale=0.73]{TclTexBestandUploaden.png}
+\label{}
+\includegraphics[scale=0.80]{TCL_Git.png}
+\end{figure}
+\newpage
 \section[Mail-server]{Configureren-mailserver}
 \section{Bash-script}
 \end{flushleft}
