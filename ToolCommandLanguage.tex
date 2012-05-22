@@ -1,0 +1,206 @@
+\documentclass{article}
+\usepackage{graphicx}
+\usepackage{makeidx}
+\begin{document}
+\begin{titlepage}
+\title{Tool Command Language}
+\author{Wim Luts}
+\date{}
+\maketitle
+\begin{center}
+\begin{figure}[htp]
+\centering
+\includegraphics[scale=1.50]{Tcl.png}
+\caption{}
+\label{Logo}
+\end{figure}
+\end{center}
+\end{titlepage}
+\newpage
+\begin{center}
+\tableofcontents
+\listoffigures
+\listoftables
+\end{center}
+
+\newpage
+\begin{flushleft}
+\section{Wat is Tool Command Language?}
+Tool Command Language, afgekort Tcl, is een open-source scripttaal ontwikkeld door John Ousterhout. Tcl wordt uitgesproken als “Tickle” ofwel “tee-see-el”. Het wordt beschouwd als een erg flexibele scripttaal en is bovendien makkelijk uitbreidbaar.\medskip
+
+Tcl is grotendeels bedoeld om zelfstandig gebruikt te worden maar wordt ook gebruikt als scripttaal in andere programma’s.\medskip
+
+Tcl is vergelijkbaar met:
+\begin{itemize}
+	\item Netscape JavaScript
+	\item Microsoft's Visual Basic
+	\item IBM's Restructured Extended Executor
+\end{itemize}
+\subsection{Ontstaan}
+Tcl werd ontwikkeld in het jaar 1988 toen John Ousterhout werkte aan de universiteit Barkeley in Californië.\medskip
+
+De taal is geboren uit frustratie van de ontwikkelaar. Hij ergerde zich aan programmeurs die een eigen taal ontwikkelden om in te brengen in een applicatie. Het originele doel van deze taal was dus een herbruikbare code maken die gebruikt kon worden bij de ontwikkeling van computerontwerp applicaties. Specifieker, de 2D layout van ontwerpen in de elektronische industrie.\medskip
+
+Tcl is nog steeds in ontwikkeling en is beschikbaar op Windows, Mac en Unix. De laatste versie is Tcl/Tk 8.5.11. Deze werd uitgegeven op 4 november 2011.
+\subsection{Grammatica}
+Tcl heeft is bedoeld als een simpele programmeer taal en heeft dan ook een makkelijk te begrijpen grammatica. De basisprincipes kan je in onderstaande tabel terugvinden.\\
+\begin{table}[!ht]
+\begin{tabular}{l}
+	Een zin is opgebouwd uit woorden gescheiden door spaties.\\
+	Een tekst bestaat uit zinnen, gescheiden door return-tekens.\\
+	Het eerste woord is een commando. De woorden die volgen zijn parameters die je wilt meegeven.\\
+	Een tekst die bestaat uit commando's is een script.\\
+	Een "\$" voor een woord zal de waarde van de variabele weergeven.\\
+	Tekst tussen accolades wordt letterlijk genomen.
+\end{tabular}
+ \caption{Grammatica}
+\end{table}
+\subsection{Voordelen van Tcl}
+\textbf{Voordelen}
+\begin{itemize}
+	\item Het is makkelijk om te leren.\\
+	\item Het heeft een heel minimale en makkelijke syntax.\\(bv. cmd arg arg arg)
+	\item Er zijn geen gereserveerde sleutelwoorden.\\(zoals bv. "$\backslash$hline" in latex)
+	\item Het gebruik van Tcl/TK kan voor een uitstekende grafische weergave zorgen.
+	\item Het is een flexibele manier om te programmeren met gebeurtenissen.
+	\item Alles kan dynamisch gewijzigd en vervangen worden.
+	\item Tcl heeft veel uitbreidingsmogelijkheiden.\\(bv. Tcl/TK,Tcl Virtual file system,...)
+	\item Het is bruikbaar in andere applicaties.
+	\item Je kan het uitbreiden met eigen gedefinieerde commando's.\\(Deze kan je schrijven in Tcl, C of Java)
+	\item Je kan Tcl code uitvoeren zonder het te moeten compileren.
+	\item Het is volledige gratis.
+\end{itemize}
+
+Maar er zijn ook andere kenmerken van Tcl die sommigen als een voordeel zien en anderen weer niet. De "alles is een string" filosofie van deze taal is hier een voorbeeld van.\\
+\subsection{Alles is een string}
+Tcl is gebasseerd op het principe dat alles gelijk is aan een string. Indien je een waarde toekent aan een variabele zal deze als string beschouwd worden en zo ook opgeslagen worden in het geheugen. Wanneer blijkt dat je deze waarde nodig hebt in een berekening wordt deze omgezet naar bijvoorbeeld een integer.\medskip
+
+Deze converties gebeuren dus enkel wanneer ze echt nodig zijn wat weinig effect heeft op de snelheid waarmee de code uitgevoerd wordt.\medskip
+
+Tcl beschikt echter over een compiler die de mogelijkheid biedt de prestaties te verbeteren. De eerste keer dat je een code uitvoerd zal deze de procedures automatisch omzetten naar een tussencode. De procedure kan dan bij een volgende aanroep veel sneller worden uitgevoerd dan de originele code in tekstvorm.\medskip
+
+\begin{figure}[htp]
+\centering
+\includegraphics[scale=1.00]{AllesIsEenString.png}
+\caption[Alles is een string]{Bovenstaande afbeelding toont de werking van Tcl}
+\label{}
+\end{figure}
+
+\subsection{Gebruik}
+Tool Command Language is een veelgebruikte en erg algemene taal. Ze wordt gebruikt op manieren die de oorspronkelijke makers nooit hadden kunnen voorspellen.\medskip
+
+Zo is de taal erg geschikt voor het bewerken van teksten, het testen van applicaties maar ook voor het opbouwen van applicaties voor systeemadministratie, wetenschappelijke doeleinden (simulaties, CAD,...), multimedia, webapplicaties en andere opties zoals bijvoorbeeld databanken.\medskip
+
+Tot de bekende applicaties die men met behulp van Tcl heeft ontwikkeld behoort onderandere het britse teletext systeem, het controle centrum van het NBC TV-kanaal, de web servers van AOL en veel van de netwerkapparaten van Cisco.\medskip
+
+Voor het maken van een Tcl applicatie heb je bovendien geen apart programma nodig. Het is een geïnterpreteerde taal en het enige dat je echt nodig hebt is de broncode.\medskip
+
+Wat je wel nodig hebt voor het uitvoeren van deze code is een Tcl interpretatie programma (shell).\medskip
+
+Tcl heeft 2 standaard shells: "tclsh" en "wish". Indien je wenst kan je echter je eigen programma maken door gebruik te maken van de Tcl/Tk libraries.\medskip
+
+\textbf{tclsh} is dus een programma dat Tcl scripts uitvoerd. is a program that executes Tcl scripts and can be used interactively to run Tcl commands\medskip
+
+\textbf{wish} is grotendeels hetzelfde als tclsh maar je hebt hierbij de optie om het in een interactieve modus commando's in te geven. Je kan wish dus ook gebruiken voor grafische programma's.\medskip
+
+Je kan dus besluiten dat Tcl ook nog eens een uitstekende vervanger van Unix shell scripts is.
+
+\subsubsection{Rapid application development}
+Rapid application development (RAD) is een software ontwikkelings methode waarbij er zo weinig mogelijk planning bij te pas komt. Op deze manier kan men zo snel mogelijk een prototype op punt zetten. Het is een van de belangrijkste redenen waarom Tcl code zo populair geworden is.\medskip
+
+Het plannen en het schrijven van de code volgt elkaar enorm snel op en gaat vaak ook samen. Je plant wat je schrijft, terwijl je het schrijft. Deze techniek dient vooral voor het bepalen van de techniek en het maken van prototypes om ze te testen. Snelle talen zoals Tcl maken dit mogelijk.\medskip
+
+Er bestaan verschillende modellen van de RAD aanpak. Dit zijn enkele van de stappen.
+\begin{enumerate}
+	\item    Definitie
+	\item    Analyse
+	\item    Ontwerp 
+	\item    Ontwikkeling
+	\item    Testen
+	\item    Ondersteuning
+\end{enumerate}
+
+\begin{figure}[htp]
+\centering
+\includegraphics[scale=0.90]{RAD.png}
+\caption{Bovenstaande afbeelding geeft de gevolgde stappen bij RAD weer.}
+\label{}
+\end{figure}
+\newpage
+\subsection{Codevoorbeelden}
+In onderstaande tabel kan je enkele voorbeelden van code in Tcl terugvinden.
+\begin{center}
+\begin{table}[!ht]
+\begin{tabular}{|l|p{2.3in}|l|}
+\hline
+\multicolumn{3}{|c|}{Codevoorbeelden}\\ \hline
+\bf{Naam}	&\bf{Beschrijving}	&\bf{Voorbeeld}\\ \hline\hline
+set	&Een variabele op een bepaalde waarde zetten.De eerste parameter is de naam, de tweede de waarde. &Set test 0\\
+\hline
+proc	&Procedure: De eerste parameter is de naam. Er zijn nog 2 andere parameters mogelijk.
+&\begin{minipage}{3in}
+\begin{verbatim}
+proc testProc {x} {
+    set test x
+}\end{verbatim}
+\end{minipage}\\
+\hline
+return	&Dit commando onderbreekt de uitvoering van de huidige procedure. De eerste parameter is het resultaat van de procedure.
+&\begin{minipage}{3in}
+\begin{verbatim}
+proc testProc {x} {
+    return x
+}\end{verbatim}
+\end{minipage} \\
+\hline
+expr	&expr berekent een rekenkundige expressie. Alle parameters worden samengevoegd en de expressie wordt berekend.
+&exp 3.1+6\\
+\hline
+if	&Het if-statement dient om voorwaarden te kunnen stellen.
+&\begin{minipage}{3in}
+\begin{verbatim}
+if {$x == 5} then {
+ set y 200
+} else {
+ set y 0
+}
+\end{verbatim}
+\end{minipage}\\ \hline
+while	&Het commando while wordt gebruikt voor het maken van een lus. Zolang er aan een bepaalde voorwaarde voldaan is zal deze opnieuw worden doorlopen.
+&\begin{minipage}{3in}
+\begin{verbatim}
+while {$x != 10} {
+ set x [expr {$x + 1}]
+}
+\end{verbatim}
+\end{minipage}\\ \hline
+\end{tabular}
+\caption{Codevoorbeelden}
+\end{table}
+\end{center}
+\section{Tcl/Tk}
+Tk is een uitbreiding van Tcl en waarschijnlijk ook een van de meest populaire. Het Tk toolkit is ook ontwikkeld door John Ousterhout en is een van de belangrijkste redenen waarom Tcl zo'n veelgebruikte taal is geworden. Het was immers de best beschikbare manier om GUI applicaties op te bouwen onder UNIX en X11. \medskip
+
+Tk is simpel maar ook verchrikkelijk krachtig voor het maken van een GUI. De ontwikkeling van dit soort applicaties was met Tcl/Tk is immers sneller en krachtiger dan met de alternatieven (bv. C, C++). Een andere reden voor de grote populariteit was grotendeels te danken aan de dynamische benaderingswijze van Tcl die goed samenging met het ontwerpen van GUI's.\medskip
+
+Je kan het Tk toolkit op onderstaande website gratis downloaden.\\
+http://www.activestate.com/Products/ActiveTcl
+\section{Dynamische talen vs. Systeem programmeer talen}
+Net als Perl, Python, Ruby, ... behoort Tcl tot de groep van dynamische talen. Hier tegenover staan de systeem programmeer talen waarvan enkele van de bekendsten C++ en Java zijn. Hoewel ze meestal voor verschillende doeleinden gebruikt worden is het toch even de moeite deze twee met elkaar te vergelijken.\medskip
+
+Systeem programmeer talen hebben doorgaans meer functies te bieden voor het maken van moeilijke data structuren en algoritmes. Een ander groot verschil is dat deze taal zich bezighoudt met het correct compileren van de code.\medskip
+
+Dynamische talen zijn eerder bedoeld voor het snel aanpassen van data, al dan niet tijdens dat de code in gebruik is. Ze zijn vaak makkelijk importeerbaar of beschikken dan weer over veel uitbreidingsmogelijkheden. Tcl is hier een ideaal voorbeeld van. Omdat het zo snel is wordt dit soort taal vaak gebruikt in heel erg grote applicaties.\medskip
+
+Ze zijn echter niet voor alles geschikt en worden daarom vaak in combinatie met systeem programmeer talen gebruikt.
+\section{Versiebeheer}
+\subsection{Kiezen van een versiebeheersysteem}
+Het kiezen van een versiebeheersysteem om op te zetten binnen Linux was voor mij niet moeilijk.\medskip
+
+Ik heb al eerder gewerkt met SVN tortoise maar mits ik hiermee problemen ondervond heb ik gezocht naar een alternatief. Dit alternatief heb ik gevonden bij Git en ik ben erg tevreden van mijn keuze. Het was makkelijk te installeren en ook handig om te gebruiken.
+\subsection{Installatie}
+
+\section[Mail-server]{Configureren-mailserver}
+\section{Bash-script}
+\end{flushleft}
+\end{document}
