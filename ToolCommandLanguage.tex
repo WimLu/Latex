@@ -38,13 +38,13 @@ Tcl heeft is bedoeld als een simpele programmeer taal en heeft dan ook een makke
 \begin{table}[!ht]
 \begin{tabular}{|l|}
 \hline
-	Een zin is opgebouwd uit woorden gescheiden door spaties.\\
-	Een tekst bestaat uit zinnen, gescheiden door return-tekens.\\
-	Het eerste woord is een commando. De woorden die volgen zijn parameters die je wilt meegeven.\\
-	Een tekst die bestaat uit commando's is een script.\\
-	Een "\$" voor een woord zal de waarde van de variabele weergeven.\\
-	Tekst tussen accolades wordt letterlijk genomen.\\
-	\hline
+Een zin is opgebouwd uit woorden gescheiden door spaties.\\
+Een tekst bestaat uit zinnen, gescheiden door return-tekens.\\
+Het eerste woord is een commando. De woorden die volgen zijn parameters die je wilt meegeven.\\
+Een tekst die bestaat uit commando's is een script.\\
+Een "\$" voor een woord zal de waarde van de variabele weergeven.\\
+Tekst tussen accolades wordt letterlijk genomen.\\
+\hline
 \end{tabular}
  \caption{Grammatica}
 \end{table}
@@ -52,17 +52,17 @@ Tcl heeft is bedoeld als een simpele programmeer taal en heeft dan ook een makke
 \subsection{Voordelen van Tcl}
 \textbf{Voordelen}
 \begin{itemize}
-	\item Het is makkelijk om te leren.\\
-	\item Het heeft een heel minimale en makkelijke syntax.\\(bv. cmd arg arg arg)
-	\item Er zijn geen gereserveerde sleutelwoorden.\\(zoals bv. "$\backslash$hline" in latex)
-	\item Het gebruik van Tcl/TK kan voor een uitstekende grafische weergave zorgen.
-	\item Het is een flexibele manier om te programmeren met gebeurtenissen.
-	\item Alles kan dynamisch gewijzigd en vervangen worden.
-	\item Tcl heeft veel uitbreidingsmogelijkheiden.\\(bv. Tcl/TK,Tcl Virtual file system,...)
-	\item Het is bruikbaar in andere applicaties.
-	\item Je kan het uitbreiden met eigen gedefinieerde commando's.\\(Deze kan je schrijven in Tcl, C of Java)
-	\item Je kan Tcl code uitvoeren zonder het te moeten compileren.
-	\item Het is volledige gratis.
+\item Het is makkelijk om te leren.\\
+\item Het heeft een heel minimale en makkelijke syntax.\\(bv. cmd arg arg arg)
+\item Er zijn geen gereserveerde sleutelwoorden.\\(zoals bv. "$\backslash$hline" in latex)
+\item Het gebruik van Tcl/TK kan voor een uitstekende grafische weergave zorgen.
+\item Het is een flexibele manier om te programmeren met gebeurtenissen.
+\item Alles kan dynamisch gewijzigd en vervangen worden.
+\item Tcl heeft veel uitbreidingsmogelijkheiden.\\(bv. Tcl/TK,Tcl Virtual file system,...)
+\item Het is bruikbaar in andere applicaties.
+\item Je kan het uitbreiden met eigen gedefinieerde commando's.\\(Deze kan je schrijven in Tcl, C of Java)
+\item Je kan Tcl code uitvoeren zonder het te moeten compileren.
+\item Het is volledige gratis.
 \end{itemize}
 
 Maar er zijn ook andere kenmerken van Tcl die sommigen als een voordeel zien en anderen weer niet. De "alles is een string" filosofie van deze taal is hier een voorbeeld van.\\
@@ -106,12 +106,12 @@ Het plannen en het schrijven van de code volgt elkaar enorm snel op en gaat vaak
 
 Er bestaan verschillende modellen van de RAD aanpak. Dit zijn enkele van de stappen.
 \begin{enumerate}
-	\item    Definitie
-	\item    Analyse
-	\item    Ontwerp 
-	\item    Ontwikkeling
-	\item    Testen
-	\item    Ondersteuning
+\item Definitie
+\item Analyse
+\item Ontwerp
+\item Ontwikkeling
+\item Testen
+\item Ondersteuning
 \end{enumerate}
 
 \begin{figure}[htp]
@@ -128,10 +128,10 @@ In onderstaande tabel kan je enkele voorbeelden van code in Tcl terugvinden.
 \begin{tabular}{|l|p{2.3in}|l|}
 \hline
 \multicolumn{3}{|c|}{Codevoorbeelden}\\ \hline
-\bf{Naam}	&\bf{Beschrijving}	&\bf{Voorbeeld}\\ \hline\hline
-set	&Een variabele op een bepaalde waarde zetten.De eerste parameter is de naam, de tweede de waarde. &Set test 0\\
+\bf{Naam} &\bf{Beschrijving} &\bf{Voorbeeld}\\ \hline\hline
+set &Een variabele op een bepaalde waarde zetten.De eerste parameter is de naam, de tweede de waarde. &Set test 0\\
 \hline
-proc	&Procedure: De eerste parameter is de naam. Er zijn nog 2 andere parameters mogelijk.
+proc &Procedure: De eerste parameter is de naam. Er zijn nog 2 andere parameters mogelijk.
 &\begin{minipage}{3in}
 \begin{verbatim}
 proc testProc {x} {
@@ -139,7 +139,7 @@ proc testProc {x} {
 }\end{verbatim}
 \end{minipage}\\
 \hline
-return	&Dit commando onderbreekt de uitvoering van de huidige procedure. De eerste parameter is het resultaat van de procedure.
+return &Dit commando onderbreekt de uitvoering van de huidige procedure. De eerste parameter is het resultaat van de procedure.
 &\begin{minipage}{3in}
 \begin{verbatim}
 proc testProc {x} {
@@ -147,20 +147,20 @@ proc testProc {x} {
 }\end{verbatim}
 \end{minipage} \\
 \hline
-expr	&expr berekent een rekenkundige expressie. Alle parameters worden samengevoegd en de expressie wordt berekend.
+expr &expr berekent een rekenkundige expressie. Alle parameters worden samengevoegd en de expressie wordt berekend.
 &exp 3.1+6\\
 \hline
-if	&Het if-statement dient om voorwaarden te kunnen stellen.
+if &Het if-statement dient om voorwaarden te kunnen stellen.
 &\begin{minipage}{3in}
 \begin{verbatim}
 if {$x == 5} then {
- set y 200
+set y 200
 } else {
- set y 0
+set y 0
 }
 \end{verbatim}
 \end{minipage}\\ \hline
-while	&Het commando while wordt gebruikt voor het maken van een lus. Zolang er aan een bepaalde voorwaarde voldaan is zal deze opnieuw worden doorlopen.
+while &Het commando while wordt gebruikt voor het maken van een lus. Zolang er aan een bepaalde voorwaarde voldaan is zal deze opnieuw worden doorlopen.
 &\begin{minipage}{3in}
 \begin{verbatim}
 while {$x != 10} {
